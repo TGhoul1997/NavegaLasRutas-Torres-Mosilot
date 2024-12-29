@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react";
 import Producto from "./Producto";
-import { zapatillas } from "../zapatillas";
+import { products } from "../zapatillas";
 
 function Productos() {
     const [items,setItems]=useState([]);
@@ -8,8 +8,8 @@ function Productos() {
     useEffect(() => {
       const fetchProductos = new Promise((resolve) => {
         setTimeout(() => {
-            resolve(zapatillas)
-        },2000)
+            resolve(products)
+        },1000)
       })
 
       fetchProductos.then((data) => {

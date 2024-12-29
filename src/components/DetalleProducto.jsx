@@ -1,9 +1,10 @@
-import zapatillas from "../zapatillas"
+import { products } from "../zapatillas";
 import { useParams } from "react-router-dom"
+
 function DetalleProducto() {
     const {id} = useParams();
     console.log(id)
-    const  producto=zapatillas.find(prod=>prod.id===parseInt(id))
+    const producto=products.find(prod=>prod.id===parseInt(id))
 
     if(!producto){
         return <h2>El producto no existe!</h2>
@@ -11,9 +12,9 @@ function DetalleProducto() {
   return (
     <div>
         <h2>Detalle del producto</h2>
-        <h2>{producto.nombre}</h2>
-        <p>{producto.descripcion}</p>
-        <h3>{producto.precio}</h3>
+        <h2>{products.nombre}</h2>
+        <p>{products.descripcion}</p>
+        <h3>{products.precio}</h3>
     </div>
   )
 }

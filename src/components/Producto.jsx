@@ -14,23 +14,24 @@ function Producto({ items }) {
     const filteredItems = selectedCategory ? items.filter(item => item.categoria === selectedCategory) : items;
 
     return (
-        <Link to={`/productos/${id}`}>
+        <div>
             <div>
                 <button onClick={() => setSelectedCategory(categorias.ADIDAS)}>Adidas</button>
                 <button onClick={() => setSelectedCategory(categorias.NIKE)}>Nike</button>
                 <button onClick={() => setSelectedCategory(categorias.FRUTAS)}>Puma</button>
             </div>
-            {filteredItems.map((item) => (
+            {filteredItems.map((items) => (
                 <Item
-                    key={item.id}
-                    nombre={item.nombre}
-                    precio={item.precio}
-                    descripcion={item.descripcion}
+                    key={items.id}
+                    nombre={items.nombre}
+                    precio={items.precio}
+                    descripcion={items.descripcion}
+                    imagen={items.imagen}
                 />
             )
 
             )}
-        </Link>
+        </div>
     )
 }
 

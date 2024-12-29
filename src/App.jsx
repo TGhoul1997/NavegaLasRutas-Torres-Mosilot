@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Layout from './components/Layout';
 import Productos from './components/Productos';
 import DetalleProducto from "./components/DetalleProducto"
+import Contactanos from "./components/Contactanos"
 
 
 
